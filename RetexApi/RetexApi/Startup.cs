@@ -38,12 +38,10 @@ namespace RetexApi
                     .AllowCredentials());
             });
 
-            services.AddDbContext<GameContext>(opt =>
-               opt.UseInMemoryDatabase("GameList"));
-            services.AddDbContext<GameConsoleContext>(opt =>
-               opt.UseInMemoryDatabase("ConsoleList"));
             services.AddDbContext<GameProductContext>(opt =>
                opt.UseInMemoryDatabase("GameProductList"));
+            services.AddDbContext<SellItemContext>(opt =>
+                opt.UseInMemoryDatabase("SellItemList"));
             services.AddDbContext<CartItemContext>(opt =>
                opt.UseInMemoryDatabase("CartItemList"));
             services.AddControllers();
