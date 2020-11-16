@@ -42,6 +42,8 @@ namespace RetexApi
                opt.UseInMemoryDatabase("GameProductList"));
             services.AddDbContext<SellItemContext>(opt =>
                 opt.UseInMemoryDatabase("SellItemList"));
+            services.AddDbContext<AccountContext>(opt =>
+               opt.UseInMemoryDatabase("AccountList"));
             services.AddDbContext<CartItemContext>(opt =>
                opt.UseInMemoryDatabase("CartItemList"));
             services.AddControllers();
